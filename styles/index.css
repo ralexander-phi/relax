@@ -11,7 +11,7 @@ main, body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/img/waterfall.jpg");
+  background-image: url("../img/waterfall.jpg");
   height: 100%;
 }
 
