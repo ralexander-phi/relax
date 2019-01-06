@@ -1,71 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8"/>
-<link rel="manifest" href="/manifest.json">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.bgimg {
-  position: relative;
-  opacity: 0.65;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("img/waterfall.jpg");
-  height: 100%;
-}
+    <title>Relax</title>
 
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
 
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-</style>
-</head>
-<body>
+    <link rel="manifest" href="/manifest.json">
 
-<script>
-    var AudioCtx = (window.AudioContext || window.webkitAudioContext)
-    var audioCtx = new AudioCtx()
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Relax">
+    <link rel="apple-touch-icon" href="img/icon/152x152.png">
+    <!-- Windows -->
+    <meta name="msapplication-TileImage" content="img/icon/144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
 
-    var lastOut = 0.0
-    brown = audioCtx.createScriptProcessor(0, 1, 1);
-    brown.onaudioprocess = function(e) {
-    	var output = e.outputBuffer.getChannelData(0);
-    	for (var i = 0; i < output.length; i++) {
-    		var skew = Math.random() * 2 - 1;
-            // Each will be up to +/-2% different from the neighbot
-    		output[i] = (0.98 * lastOut) + (0.02 * skew)
-        	lastOut = output[i];
-    	}
-    }
+    <link rel="icon"
+         type="image/png"
+         href="img/icon/144x144.png">
+  </head>
+  <body>
+    <main class="main">
+      <div class="bgimg">
+        <div class="caption">
+          <span class="border">RELAX</span>
+        </div>
+      </div>
+    </main>
 
-    brown.connect(audioCtx.destination);
-</script>
-
-<div class="bgimg">
-  <div class="caption">
-    <span class="border">RELAX</span>
-  </div>
-</div>
-</body>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/audio.js"></script>
+  </body>
 </html>
 
