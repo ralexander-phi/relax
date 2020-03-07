@@ -9,7 +9,7 @@
         var output = e.outputBuffer.getChannelData(0);
         for (var i = 0; i < output.length; i++) {
             var skew = Math.random() * 2 - 1;
-            // Each will be up to +/-2% different from the neighbot
+            // Each will be up to +/-2% different from the neighbor
             output[i] = (0.98 * lastOut) + (0.02 * skew)
             lastOut = output[i];
         }
