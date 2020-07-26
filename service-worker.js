@@ -14,8 +14,6 @@ var filesToCache = [
  "./manifest.json",
  "./scripts",
  "./scripts/app.js",
- "./scripts/jquery-3.3.1.js",
- "./scripts/jquery.qrcode.min.js",
  "./service-worker.js",
 ];
 
