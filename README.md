@@ -6,3 +6,7 @@
 
 So, you need some noise?
 
+## Attribution
+
+Meditate icons made by [becris](https://www.flaticon.com/authors/becris). Thanks!
+
