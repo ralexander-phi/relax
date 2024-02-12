@@ -1,5 +1,5 @@
 
-(function() {
+function startAudio() {
     var AudioCtx = (window.AudioContext || window.webkitAudioContext)
     var audioCtx = new AudioCtx()
 
@@ -16,5 +16,5 @@
     }
 
     brown.connect(audioCtx.destination);
-})();
+}
 
